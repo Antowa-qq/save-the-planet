@@ -1,0 +1,329 @@
+@font-face {
+  font-family: Rubik;
+  src: url(./fonts/static/Rubik-Regular.ttf);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 1440px;
+  font-size: 10px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+}
+header {
+  width: 100%;
+  background-image: url("./img/header_img.png");
+  height: 706px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 31px 0px 58px 0px;
+}
+
+.header__title {
+  font-weight: bold;
+  font-size: 4.8em;
+  color: white;
+  max-width: 678px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+  min-height: 111px;
+}
+
+.header__title .typed-line {
+  color: #f8f8f8;
+  opacity: 1;
+  font-family: "Times New Roman", sans-serif;
+  font-weight: 100;
+  animation: typedjsBlink 1s infinite;
+}
+@keyframes typedjsBlink {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.logo__img {
+  background-image: url(./img/world_logo.svg);
+  width: 36px;
+  height: 36px;
+  background-repeat: no-repeat;
+}
+
+.logo__title {
+  color: #ffc633;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+.navigation {
+  display: flex;
+  width: 1050px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.navigation .navigation__item {
+  margin-bottom: 44px;
+}
+.navigation .navigation__item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.navigation .navigation__item .navigation__img {
+  margin-bottom: 16px;
+  width: 95px;
+  height: 95px;
+  background-repeat: no-repeat;
+}
+
+.navigation .navigation__item .navigation__item-title {
+  font-size: 2.4em;
+  color: white;
+  width: 195px;
+  text-align: center;
+}
+.navigation .navigation__item:hover .navigation__item-title {
+  color: #ffc633;
+}
+
+.navigation .navigation__item.active .navigation__item-title {
+  color: #ffc633;
+}
+
+.main {
+  padding: 50px 180px;
+}
+
+@keyframes move_block {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.cards {
+  overflow: hidden;
+}
+
+.card {
+  display: none;
+}
+
+.card.card_active {
+  display: block;
+}
+
+.card__title {
+  font-size: 3.6em;
+  margin-bottom: 5px;
+  font-weight: bold;
+  animation: 1s linear 0s forwards move_block;
+  position: relative;
+  transform: translateX(-100%);
+  width: fit-content;
+}
+
+.card__status {
+  width: fit-content;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  animation: 1s linear 1s forwards move_block;
+  position: relative;
+  transform: translateX(-100%);
+}
+
+@keyframes blink {
+  from {
+    color: red;
+  }
+  to {
+    color: rgb(255, 218, 218);
+  }
+}
+
+.card__status span {
+  color: red;
+  animation: 0.7s linear 2s 6 forwards alternate blink;
+}
+
+.card__content {
+  transform: translateX(-100%);
+  animation: 1s linear 2s forwards move_block;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.8em;
+}
+
+.card__content-description {
+  padding-top: 20px;
+  padding-left: 75px;
+}
+.card__content-description .card__content-title {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 24px;
+}
+.card__content-description .card__content-text span {
+  color: red;
+  animation: 0.7s linear 2s 6 forwards alternate blink;
+  font-weight: 900;
+}
+
+.card__description {
+  font-size: 1.8em;
+  transform: translateX(-100%);
+  animation: 1s linear 3s forwards move_block;
+  margin-top: 45px;
+}
+.card__description p {
+  margin-bottom: 20px;
+}
+
+.navigation .navigation__item.navigation__item_1 .navigation__img {
+  background-image: url(./img/amur_leopard_white.png);
+}
+
+.navigation .navigation__item.active.navigation__item_1 .navigation__img {
+  background-image: url(./img/amur_leopard_yellow.png);
+}
+
+.navigation .navigation__item.navigation__item_1:hover .navigation__img {
+  background-image: url(./img/amur_leopard_yellow.png);
+}
+
+.navigation .navigation__item.navigation__item_2 .navigation__img {
+  background-image: url(./img/javan_white.png);
+}
+.navigation .navigation__item.active.navigation__item_2 .navigation__img {
+  background-image: url(./img/javan_yellow.png);
+}
+
+.navigation .navigation__item.navigation__item_2:hover .navigation__img {
+  background-image: url(./img/javan_yellow.png);
+}
+
+.navigation .navigation__item.navigation__item_3 .navigation__img {
+  background-image: url(./img/gorillas_white.png);
+}
+
+.navigation .navigation__item.navigation__item_3:hover .navigation__img {
+  background-image: url(./img/gorillas_yellow.png);
+}
+
+.navigation .navigation__item.active.navigation__item_3 .navigation__img {
+  background-image: url(./img/gorillas_yellow.png);
+}
+
+.navigation .navigation__item.navigation__item_4 .navigation__img {
+  background-image: url(./img/Vaguita_white.png);
+}
+
+.navigation .navigation__item.navigation__item_4:hover .navigation__img {
+  background-image: url(./img/Vaguita_yellow.png);
+}
+
+.navigation .navigation__item.active.navigation__item_4 .navigation__img {
+  background-image: url(./img/Vaguita_yellow.png);
+}
+
+.navigation .navigation__item.navigation__item_5 .navigation__img {
+  background-image: url(./img/Saola_whitte.png);
+}
+
+.navigation .navigation__item.navigation__item_5:hover .navigation__img {
+  background-image: url(./img/Saola_yellow.png);
+}
+
+.navigation .navigation__item.active.navigation__item_5 .navigation__img {
+  background-image: url(./img/Saola_yellow.png);
+}
+
+.navigation .navigation__item.navigation__item_6 .navigation__img {
+  background-image: url(./img/Gharial_white.png);
+}
+
+.navigation .navigation__item.navigation__item_6:hover .navigation__img {
+  background-image: url(./img/Gharial_yellow.png);
+}
+
+.navigation .navigation__item.active.navigation__item_6 .navigation__img {
+  background-image: url(./img/Gharial_yellow.png);
+}
+
+.navigation .navigation__item.navigation__item_7 .navigation__img {
+  background-image: url(./img/Amur_tiger_white.png);
+  background-position: -13px -6px;
+}
+
+.navigation .navigation__item.navigation__item_7:hover .navigation__img {
+  background-image: url(./img/Amur_tiger_yellow.png);
+}
+
+.navigation .navigation__item.active.navigation__item_7 .navigation__img {
+  background-image: url(./img/Amur_tiger_yellow.png);
+}
+
+.navigation .navigation__item.navigation__item_8 .navigation__img {
+  background-image: url(./img/North_Atlantic_right_whale_white.png);
+}
+
+.navigation .navigation__item.navigation__item_8:hover .navigation__img {
+  background-image: url(./img/North_Atlantic_right_whale_yellow.png);
+}
+
+.navigation .navigation__item.active.navigation__item_8 .navigation__img {
+  background-image: url(./img/North_Atlantic_right_whale_yellow.png);
+}
+
+.navigation .navigation__item.navigation__item_9 .navigation__img {
+  background-image: url(./img/Sumatran_elephant_white.png);
+}
+
+.navigation .navigation__item.navigation__item_9:hover .navigation__img {
+  background-image: url(./img/Sumatran_elephant_yellow.png);
+}
+
+.navigation .navigation__item.active.navigation__item_9 .navigation__img {
+  background-image: url(./img/Sumatran_elephant_yellow.png);
+}
+
+.navigation .navigation__item.navigation__item_10 .navigation__img {
+  background-image: url(./img/lemur_white.png);
+}
+
+.navigation .navigation__item.navigation__item_10:hover .navigation__img {
+  background-image: url(./img/lemur_yellow.png);
+}
+
+.navigation .navigation__item.active.navigation__item_10 .navigation__img {
+  background-image: url(./img/lemur_yellow.png);
+}
